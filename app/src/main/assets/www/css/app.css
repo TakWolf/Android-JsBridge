@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: inline-block;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+
+.deep-line {
+  height: 1px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background: #cecece;
+}
+
+.label-key {
+  margin: 8px 8px 0;
+  color: #007aff;
+  font-size: 14px;
+}
+
+.label-value {
+  margin: 8px;
+  font-size: 16px;
+}
+
+.button {
+  height: 32px;
+  margin: 8px;
+  border-width: 0;
+  border-radius: 16px;
+  line-height: 32px;
+  color: white;
+  background: #007aff;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button:active {
+  background: #045ebe;
+}
+
+/*# sourceMappingURL=app.css.map */
