@@ -6,14 +6,14 @@ fun WebView.setupJsBridge() {
     JsBridge.setup(this)
 }
 
-fun WebView.registerJsService(name: String, handler: ServiceHandler) {
+fun WebView.registerBridgeService(name: String, handler: ServiceHandler) {
     JsBridge.registerService(this, name, handler)
 }
 
-fun WebView.unregisterJsService(name: String) {
+fun WebView.unregisterBridgeService(name: String) {
     JsBridge.unregisterService(this, name)
 }
 
-fun WebView.setJsErrorHandler(handler: ErrorHandler?) {
+fun WebView.setBridgeErrorHandler(handler: ErrorHandler?) {
     JsBridge.setErrorHandler(this, handler)
 }
