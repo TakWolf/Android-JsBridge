@@ -6,6 +6,8 @@
 [![License](https://img.shields.io/github/license/TakWolf/Android-JsBridge)](https://www.apache.org/licenses/LICENSE-2.0)
 [![JitPack](https://jitpack.io/v/TakWolf/Android-JsBridge.svg)](https://jitpack.io/#TakWolf/Android-JsBridge)
 
+Android 平台 WebView 和 JavaScript 交互的一个解决方案。
+
 ## License
 
 ```
