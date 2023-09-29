@@ -39,7 +39,7 @@ publishing {
         register<MavenPublication>("release") {
             groupId = "com.takwolf.android.jsbridge"
             artifactId = "jsbridge"
-            version = "0.0.1"
+            version = "0.0.2"
 
             afterEvaluate {
                 from(components["release"])
