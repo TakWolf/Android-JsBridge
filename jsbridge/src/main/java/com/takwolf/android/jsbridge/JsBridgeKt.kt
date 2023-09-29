@@ -14,6 +14,6 @@ fun WebView.unregisterJsService(name: String) {
     JsBridge.unregisterService(this, name)
 }
 
-fun WebView.setDefaultJsServiceHandler(handler: ServiceHandler?) {
-    JsBridge.setDefaultServiceHandler(this, handler)
+fun WebView.setJsErrorHandler(handler: ErrorHandler?) {
+    JsBridge.setErrorHandler(this, handler)
 }
