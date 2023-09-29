@@ -1,0 +1,51 @@
+plugins {
+    id("com.android.library")
+    id("org.jetbrains.kotlin.android")
+    id("maven-publish")
+}
+
+android {
+    namespace = "com.takwolf.android.jsbridge"
+    compileSdk = 34
+
+    defaultConfig {
+        minSdk = 24
+
+        consumerProguardFiles("consumer-rules.pro")
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    compileOnly("androidx.annotation:annotation:1.6.0")
+}
+
+tasks {
+    register("sourcesJar", Jar::class) {
+        from(android.sourceSets["main"].java.srcDirs)
+        archiveClassifier.set("sources")
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                groupId = "com.takwolf.android.jsbridge"
+                artifactId = "jsbridge"
+                version = "0.0.1"
+
+                from(components["release"])
+                artifact(tasks.named("sourcesJar"))
+            }
+        }
+    }
+}
