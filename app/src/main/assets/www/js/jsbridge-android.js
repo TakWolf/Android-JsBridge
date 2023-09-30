@@ -15,7 +15,7 @@
         platform: 'android',
         callService(name, params) {
             return new Promise((resolve, reject) => {
-                let callId = ++callIdSeed;
+                let callId = callIdSeed++;
                 callRegistry[callId] = { resolve, reject };
                 nativeBridge.callService(callId, name, params);
             });
