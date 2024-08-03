@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         WebView.setWebContentsDebuggingEnabled(true)
 
@@ -37,7 +38,5 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.web.loadUrl("file:///android_asset/www/index.html")
-
-        setContentView(binding.root)
     }
 }
