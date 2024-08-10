@@ -12,17 +12,17 @@ import com.takwolf.android.jsbridge.setupJsBridge
 class MainActivity : AppCompatActivity() {
     companion object {
         private const val TAG = "MainActivity"
-    }
 
-    private lateinit var binding: ActivityMainBinding
+        init {
+            WebView.setWebContentsDebuggingEnabled(true)
+        }
+    }
 
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        WebView.setWebContentsDebuggingEnabled(true)
 
         binding.web.settings.javaScriptEnabled = true
         binding.web.setupJsBridge()
