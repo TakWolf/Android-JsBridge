@@ -16,5 +16,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Android-JsBridge"
 
-include(":jsbridge")
-include(":app")
+include("jsbridge")
+include("app")
