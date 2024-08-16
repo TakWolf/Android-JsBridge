@@ -39,5 +39,7 @@ android {
 dependencies {
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("androidx.activity:activity-ktx:1.9.0")
+    implementation("com.github.TakWolf.Android-InsetsWidget:insetswidget:0.0.1")
     implementation(project(":jsbridge"))
 }
