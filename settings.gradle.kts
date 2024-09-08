@@ -18,4 +18,7 @@ dependencyResolutionManagement {
 rootProject.name = "Android-JsBridge"
 
 include("jsbridge")
+include("converter-moshi")
+include("converter-gson")
+include("converter-jackson")
 include("app")

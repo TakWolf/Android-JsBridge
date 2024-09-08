@@ -42,4 +42,7 @@ dependencies {
     implementation("androidx.activity:activity-ktx:1.9.1")
     implementation("com.github.TakWolf.Android-InsetsWidget:insetswidget:0.0.1")
     implementation(project(":jsbridge"))
+    implementation(project(":converter-moshi"))
+    implementation(project(":converter-gson"))
+    implementation(project(":converter-jackson"))
 }
