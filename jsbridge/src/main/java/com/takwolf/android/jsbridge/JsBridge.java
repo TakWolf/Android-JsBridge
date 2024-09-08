@@ -1,6 +1,5 @@
 package com.takwolf.android.jsbridge;
 
-import android.annotation.SuppressLint;
 import android.util.Log;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
@@ -31,19 +30,18 @@ public final class JsBridge {
         }
     };
 
-    @SuppressLint("JavascriptInterface")
     public static void setup(@NonNull WebView webView) {
-        if (webView.getTag(R.id.jsbridge) != null) {
+        if (webView.getTag(R.id.js_bridge) != null) {
             return;
         }
         JsBridge jsBridge = new JsBridge(webView);
         webView.addJavascriptInterface(jsBridge, NAME_NATIVE_BRIDGE);
-        webView.setTag(R.id.jsbridge, jsBridge);
+        webView.setTag(R.id.js_bridge, jsBridge);
     }
 
     @NonNull
     private static JsBridge with(@NonNull WebView webView) {
-        JsBridge jsBridge = (JsBridge) webView.getTag(R.id.jsbridge);
+        JsBridge jsBridge = (JsBridge) webView.getTag(R.id.js_bridge);
         if (jsBridge == null) {
             throw new RuntimeException("JsBridge not setup");
         }
